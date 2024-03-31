@@ -122,7 +122,7 @@
       
         .formbold-btn {
           text-align: center;
-          width: 100%;
+          width: 50%;
           font-size: 16px;
           border-radius: 5px;
           padding: 14px 25px;
@@ -132,11 +132,24 @@
           color: white;
           cursor: pointer;
           margin-top: 25px;
+          display: block;
+           width: 100%; /* Make the button the full width of its parent */
+            margin: auto; /* Center the button */
         }
         .formbold-btn:hover {
           box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
         }
-      
+        .g-recaptcha {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        }
+
+        h1 {
+        text-align: center;
+        margin-bottom: 20px; /* Adjust as needed */
+    }
+
       </style>
 </head>
 <body>
@@ -144,8 +157,14 @@
 <div class="formbold-main-wrapper">
     <!-- Author: FormBold Team -->
     <!-- Learn More: https://formbold.com -->
+    
     <div class="formbold-form-wrapper">
+      <h1>Contact Form</h1> 
+
       <form id=form action="https://formbold.com/s/FORM_ID" method="POST">
+        <div>
+          
+        </div>
           <div class="formbold-input-flex">
             <div>
                 <label for="firstname" class="formbold-form-label"> First name </label>
@@ -240,7 +259,7 @@
                   class="formbold-form-input"
               ></textarea>
           </div>
-          <div class="g-recaptcha" data-sitekey="6LcTEKopAAAAAADYElg8ZGXfO8jIMpj5cvT_YTmB"></div>
+          <div class="g-recaptcha" data-sitekey="6LehPqopAAAAAKt6o6ssg9j5sxOickMMVe71WzwD"></div>
           <br/>
           <button type="submit" class="formbold-btn" id="button">
               Send Message
@@ -258,7 +277,7 @@
     btn.value = 'Sending...';
  
     const serviceID = 'default_service';
-    const templateID = 'template_xnb09ke';
+    const templateID = 'template_y5apqyg';
  
     emailjs.sendForm(serviceID, templateID, this)
      .then(() => {
