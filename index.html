@@ -3,35 +3,7 @@
 <head>
     <title>Send email</title>
 
-    <script type="text/javascript">
-        const btn = document.getElementById('button');
-     
-     document.getElementById('form')
-      .addEventListener('submit', function(event) {
-        event.preventDefault();
-     
-        btn.value = 'Sending...';
-     
-        const serviceID = 'default_service';
-        const templateID = 'template_xnb09ke';
-     
-        emailjs.sendForm(serviceID, templateID, this)
-         .then(() => {
-           btn.value = 'Send Email';
-           alert('Sucessfull Sent email!');
-         }, (err) => {
-           btn.value = 'Send Email';
-           alert(JSON.stringify(err));
-         });
-     });
-     </script>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script type="text/javascript">
-  emailjs.init('rJXSVlyn0gywDuPsj')
-
-</script>
+  
 
       <style>
        .field {
@@ -83,7 +55,35 @@ input[type="submit"] {
         <input type="submit" id="button" value="Send Email">
       </form>
 
+      <script type="text/javascript">
+        const btn = document.getElementById('button');
+     
+     document.getElementById('form')
+      .addEventListener('submit', function(event) {
+        event.preventDefault();
+     
+        btn.value = 'Sending...';
+     
+        const serviceID = 'default_service';
+        const templateID = 'template_xnb09ke';
+     
+        emailjs.sendForm(serviceID, templateID, this)
+         .then(() => {
+           btn.value = 'Send Email';
+           alert('Sucessfull Sent email!');
+         }, (err) => {
+           btn.value = 'Send Email';
+           alert(JSON.stringify(err));
+         });
+     });
+     </script>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('rJXSVlyn0gywDuPsj')
+
+</script>
 
 
 
