@@ -265,8 +265,42 @@
               Send Message
           </button>
       </form>
+      <div id="thankyouMessage" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; flex-direction: column;">
+        <h2 style="color: white;">Thank you for your message!</h2>
+        <button id="resubmitButton" style="margin-top: 20px;">Resubmit</button>
+      </div>
     </div>
   </div>
+
+
+  <script type="text/javascript">
+    const form = document.getElementById('form');
+    const thankyouMessage = document.getElementById('thankyouMessage');
+    const resubmitButton = document.getElementById('resubmitButton');
+  
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+  
+        // Hide the form and show the thank you message
+        form.style.display = 'none';
+        thankyouMessage.style.display = 'flex';
+    });
+  
+    resubmitButton.addEventListener('click', function() {
+        // Hide the thank you message and show the form
+        thankyouMessage.style.display = 'none';
+        form.style.display = 'block';
+  
+        // Clear the form
+        form.reset();
+    });
+  </script>
+
+
+
+
+
+
   <script type="text/javascript">
     const btn = document.getElementById('button');
  
