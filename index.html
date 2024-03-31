@@ -70,7 +70,9 @@ input[type="submit"] {
         emailjs.sendForm(serviceID, templateID, this)
          .then(() => {
            btn.value = 'Send Email';
-           alert('Sucessfull Sent email!');
+           alert('Thank you for your details. we have sucessfully recieved your message and will connect with you shortly');
+           form.reset(); // Clear the form
+            location.reload(); // Refresh the page
          }, (err) => {
            btn.value = 'Send Email';
            alert(JSON.stringify(err));
